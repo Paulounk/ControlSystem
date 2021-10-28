@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { HomeComponent } from './views/home/home.component';
-import { DocumentCrudComponent } from './views/document-crud/document-crud.component'
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
+import { DocumentListComponent } from './components/document/document-list/document-list.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
-  {path: "document", component: DocumentCrudComponent},
+  {path: "document", component: DocumentListComponent},
   {path: "document/create", component: DocumentCreateComponent}
 ];
 

@@ -3,5 +3,6 @@ export interface Document{
     name: string,
     activity: string,
     hours: number,
+    link: string,
     status: string
 }

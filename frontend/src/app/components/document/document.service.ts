@@ -12,7 +12,6 @@ export class DocumentService {
 
   baseUrl = "http://localhost:3000/documents"
 
-
   constructor(
     private snackBar: MatSnackBar,
     private http: HttpClient
@@ -29,5 +28,16 @@ export class DocumentService {
   create(document: Document): Observable<Document> { 
     return this.http.post<Document>(this.baseUrl, document)
   }
+
+  read(): Observable<Document[]>{
+    return this.http.get<Document[]>(this.baseUrl)
+  }
+
+  readById(id: string): Observable<Document>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Document>(url)
+  }
+
+  
 
 }

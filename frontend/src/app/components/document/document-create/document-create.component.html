@@ -1,9 +1,31 @@
-<p>document-create works!</p>
+<mat-card class="mat-elevation-z5">
+    <mat-card-title class="title">Lançamento de Horas Extras Curriculares</mat-card-title>
+    
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Nome do Documento</mat-label>
+            <input matInput [(ngModel)]="document.name" name="name">
+        </mat-form-field>
 
-<button mat-raised-button (click)="createDocument()" color="primary">
-    Save
-</button>
+        <mat-form-field appearance="outline">
+            <mat-label>Atividade</mat-label>
+            <input matInput [(ngModel)]="document.activity" name="atividade">
+        </mat-form-field>
 
-<button mat-raised-button (click)="cancel()">
-    Cancel
-</button>
+        <mat-form-field appearance="outline">
+            <mat-label>Qtd. Horas</mat-label>
+            <input matInput [(ngModel)]="document.hours" name="hours" type="number">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Link do Documento</mat-label>
+            <input matInput [(ngModel)]="document.link" name="link">
+        </mat-form-field>
+    </form>
+
+    <div class="buttons">
+        <button mat-raised-button (click)="createDocument()" color="primary">Salvar</button>
+        <button mat-raised-button (click)="cancel()" color="warn" class="ml-3">Cancelar</button>
+    </div>
+    
+</mat-card>

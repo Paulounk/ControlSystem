@@ -8,7 +8,6 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
-import { DocumentCrudComponent } from './views/document-crud/document-crud.component';
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,6 +17,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule} from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { DocumentListComponent } from './components/document/document-list/document-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -26,8 +32,8 @@ import { HttpClientModule} from '@angular/common/http';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    DocumentCrudComponent,
-    DocumentCreateComponent
+    DocumentCreateComponent,
+    DocumentListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,13 @@ import { HttpClientModule} from '@angular/common/http';
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

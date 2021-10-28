@@ -14,7 +14,8 @@ export class DocumentCreateComponent implements OnInit {
     name: "",
     activity: "",
     hours: 0,
-    status: ""
+    link: "",
+    status: "Pendente"
   }
 
   constructor(
