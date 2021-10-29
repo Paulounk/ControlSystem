@@ -1,30 +1,30 @@
-<mat-card class="mat-elevation-z5">
-    <mat-card-title class="title">Lançamento de Horas Extras Curriculares</mat-card-title>
+<mat-card class="mat-elevation-z8">
+    <mat-card-title class="title">Confirmar Exclusão</mat-card-title>
     
     <form>
         <mat-form-field appearance="outline">
             <mat-label>Nome do documento</mat-label>
-            <input matInput [(ngModel)]="document.name" name="name">
+            <input matInput  [(ngModel)]="document.name"  name="name" disabled>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Atividade</mat-label>
-            <input matInput [(ngModel)]="document.activity" name="atividade">
+            <input matInput [(ngModel)]="document.activity" name="atividade" disabled>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Qtd. horas</mat-label>
-            <input matInput [(ngModel)]="document.hours" name="hours" type="number">
+            <input matInput [(ngModel)]="document.hours" name="hours" type="number" disabled>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Link do documento</mat-label>
-            <input matInput [(ngModel)]="document.link" name="link">
+            <input matInput [(ngModel)]="document.link" name="link" disabled>
         </mat-form-field>
     </form>
 
     <div class="buttons">
-        <button mat-stroked-button (click)="createDocument()"  class="btnsalvar">Salvar</button>
+        <button mat-stroked-button (click)="deleteDocument()"  class="btnsalvar">Confirmar</button>
         <button mat-stroked-button (click)="cancelar()" class="btncancelar">Cancelar</button>
     </div>
     

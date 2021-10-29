@@ -1,10 +1,10 @@
-<mat-card class="mat-elevation-z5">
-    <mat-card-title class="title">Lançamento de Horas Extras Curriculares</mat-card-title>
+<mat-card class="mat-elevation-z8">
+    <mat-card-title class="title">Alteração de Documento</mat-card-title>
     
     <form>
         <mat-form-field appearance="outline">
             <mat-label>Nome do documento</mat-label>
-            <input matInput [(ngModel)]="document.name" name="name">
+            <input matInput  [(ngModel)]="document.name"  name="name">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -24,7 +24,7 @@
     </form>
 
     <div class="buttons">
-        <button mat-stroked-button (click)="createDocument()"  class="btnsalvar">Salvar</button>
+        <button mat-stroked-button (click)="updateDocument()"  class="btnsalvar">Alterar</button>
         <button mat-stroked-button (click)="cancelar()" class="btncancelar">Cancelar</button>
     </div>
     

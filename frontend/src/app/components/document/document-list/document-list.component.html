@@ -1,14 +1,10 @@
-<div class="buttons">
-  <button mat-raised-button class="lancarHora" (click)="navigateToDocumentCreate()" color="primary">
-    Lançar Horas
-  </button>
-  <button mat-raised-button color="light" class="horasTotal">
-    Total Horas: {{horasTotais}}
-  </button>
-</div>
+<button mat-raised-button color="light" class="horasTotal">
+  Total Horas: {{horasTotais}}
+</button>
+
 
 <!-- Tabela com Angular Material -->
-<table mat-table [dataSource]="documents" class="mat-elevation-z2">
+<table mat-table [dataSource]="documents" class="mat-elevation-z1">
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Nome do Documento</th>
@@ -33,10 +29,10 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef>Ações</th>
     <td mat-cell *matCellDef="let row">
-      <a routerLink="">
+      <a routerLink="/document/update/{{row.id}}">
         <i class="material-icons edit">edit</i>
       </a>
-      <a routerLink="">
+      <a routerLink="/document/delete/{{row.id}}">
         <i class="material-icons delete">delete</i>
       </a>
     </td>

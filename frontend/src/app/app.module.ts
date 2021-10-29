@@ -24,6 +24,8 @@ import { DocumentListComponent } from './components/document/document-list/docum
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DocumentUpdateComponent } from './components/document/document-update/document-update.component';
+import { DocumentDeleteComponent } from './components/document/document-delete/document-delete.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MatSortModule } from '@angular/material/sort';
     NavComponent,
     HomeComponent,
     DocumentCreateComponent,
-    DocumentListComponent
+    DocumentListComponent,
+    DocumentUpdateComponent,
+    DocumentDeleteComponent
   ],
   imports: [
     BrowserModule,

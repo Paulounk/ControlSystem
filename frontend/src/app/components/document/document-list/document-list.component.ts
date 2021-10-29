@@ -21,19 +21,17 @@ export class DocumentListComponent implements OnInit {
     private documentService: DocumentService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getDocuments()
   }
 
   getDocuments() {
     this.documentService.read().subscribe(documents => {
       this.documents = documents
-  
       this.documents.filter(i => {
-        i.status === "Homologado"
+        return i.status === "Homologado"
       }).forEach(i => {
         this.horasTotais += i.hours
-        console.log(i)
       })
     })
   }

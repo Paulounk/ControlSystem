@@ -15,7 +15,7 @@ export class DocumentCreateComponent implements OnInit {
     activity: "",
     hours: 0,
     link: "",
-    status: "Pendente"
+    status: "Homologado"
   }
 
   constructor(
@@ -34,7 +34,7 @@ export class DocumentCreateComponent implements OnInit {
     })
   }
 
-  cancel(): void{
+  cancelar(): void{
     this.router.navigate(['/document'])
   }
 

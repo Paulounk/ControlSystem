@@ -24,7 +24,7 @@ a{
 
 a{
     text-decoration: none;
-    color: rgb(22, 73, 139);
+    color: rgb(70, 70, 70);
 }
 
 i.edit{
@@ -37,6 +37,7 @@ i.delete{
 }
 
 th{
+    color: rgb(85, 85, 85);
     font-size: 16px;
 }
 

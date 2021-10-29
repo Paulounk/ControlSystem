@@ -17,27 +17,38 @@ export class DocumentService {
     private http: HttpClient
   ) { }
 
-  showMessage(msg: string): void {
+  showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'x', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     })
   }
 
-  create(document: Document): Observable<Document> { 
-    return this.http.post<Document>(this.baseUrl, document)
+  create(document: Document): Observable<Document> {
+    return this.http.post<Document>(this.baseUrl, document).pipe(
+      
+    )
   }
 
-  read(): Observable<Document[]>{
+  read(): Observable<Document[]> {
     return this.http.get<Document[]>(this.baseUrl)
   }
 
-  readById(id: string): Observable<Document>{
+  readById(id: string): Observable<Document> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Document>(url)
   }
 
-  
+  update(document: Document): Observable<Document> {
+    const url = `${this.baseUrl}/${document.id}`
+    return this.http.put<Document>(url, document)
+  }
+
+  delete(id: string): Observable<Document> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Document>(url)
+  }
 
 }

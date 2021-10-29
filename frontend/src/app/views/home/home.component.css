@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Rampart+One&display=swap');
+
+
 .home .title{
-    font-size: 3rem;
-    font-weight: 250;
-    line-height: 1.2;
+    font-size: 2rem;
+    font-family: 'Archivo Black', sans-serif;
+    color: rgb(88, 88, 88);
+    margin: 10px 0 25px 0;
 }
 
 .home .subtitle{
     margin: 10px 0 10px 0;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: black;
 }
