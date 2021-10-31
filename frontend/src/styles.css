@@ -4,16 +4,11 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .msg-success{
-    background-color: #28a745;
+    background-color: #20943b;
     color: #fff;
 }
 
 .msg-error{
-    background-color: #e35e6b;
-    color: #fff;
-}
-
-.msg-alert{
-    background-color: #28a745;
+    background-color: #b14b4b;
     color: #fff;
 }

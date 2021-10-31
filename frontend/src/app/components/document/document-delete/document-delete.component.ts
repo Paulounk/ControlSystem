@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Document } from '../document.model';
-import { DocumentService } from '../document.service';
+import { Document } from '../../model/document.model';
+import { DocumentService } from '../../service/document.service';
 
 @Component({
   selector: 'app-document-delete',
@@ -30,7 +30,6 @@ export class DocumentDeleteComponent implements OnInit {
     this.id = this.route.snapshot.params['id']
     this.documentService.delete(this.id).subscribe(document => {
       this.document = document
-      this.documentService.showMessage('Documento deletado com sucesso')
       this.router.navigate(['/document'])
     })
   }

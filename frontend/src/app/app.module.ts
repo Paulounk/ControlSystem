@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/template/header/header.component';
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
-import { HomeComponent } from './views/home/home.component';
+import { HomeComponent } from './components/template/home/home.component';
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -27,6 +27,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { DocumentUpdateComponent } from './components/document/document-update/document-update.component';
 import { DocumentDeleteComponent } from './components/document/document-delete/document-delete.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { DocumentDeleteComponent } from './components/document/document-delete/d
     DocumentCreateComponent,
     DocumentListComponent,
     DocumentUpdateComponent,
-    DocumentDeleteComponent
+    DocumentDeleteComponent,
   ],
   imports: [
     BrowserModule,

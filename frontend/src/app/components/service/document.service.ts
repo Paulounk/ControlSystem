@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Document } from './document.model';
-
+import { EMPTY, Observable } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { Document } from '../model/document.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DocumentService {
 
-  baseUrl = "http://localhost:3000/documents"
+  baseUrl = "http://localhost:8080/documents"
 
   constructor(
     private snackBar: MatSnackBar,
@@ -18,7 +18,7 @@ export class DocumentService {
   ) { }
 
   showMessage(msg: string, isError: boolean = false): void {
-    this.snackBar.open(msg, 'x', {
+    this.snackBar.open(msg, '', {
       duration: 3000,
       horizontalPosition: "right",
       verticalPosition: "top",
@@ -27,9 +27,16 @@ export class DocumentService {
   }
 
   create(document: Document): Observable<Document> {
+
     return this.http.post<Document>(this.baseUrl, document).pipe(
-      
-    )
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
+  errorHandler(e: any): Observable<any> {
+    this.showMessage('Algo deu errado. Verifique se o backend está rodando!', true)
+    return EMPTY
   }
 
   read(): Observable<Document[]> {
@@ -42,8 +49,7 @@ export class DocumentService {
   }
 
   update(document: Document): Observable<Document> {
-    const url = `${this.baseUrl}/${document.id}`
-    return this.http.put<Document>(url, document)
+    return this.http.put<Document>(this.baseUrl, document)
   }
 
   delete(id: string): Observable<Document> {

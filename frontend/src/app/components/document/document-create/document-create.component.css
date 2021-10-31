@@ -12,6 +12,10 @@ form{
     color: rgb(87, 87, 87);
 }
 
+mat-label{
+    font-size: 17px;
+}
+
 .buttons {
     display: flex;
     justify-content:center;

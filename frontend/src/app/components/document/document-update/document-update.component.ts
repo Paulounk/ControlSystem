@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Document } from '../document.model';
-import { DocumentService } from '../document.service';
+import { Document } from '../../model/document.model';
+import { DocumentService } from '../../service/document.service';
 
 @Component({
   selector: 'app-document-update',
@@ -27,7 +27,6 @@ export class DocumentUpdateComponent implements OnInit {
 
   updateDocument(): void {
     this.documentService.update(this.document).subscribe(() => {
-      this.documentService.showMessage('Alteração feita com sucesso!')
       this.router.navigate(['/document'])
     })
   }

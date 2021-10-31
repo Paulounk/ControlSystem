@@ -41,15 +41,12 @@ th{
     font-size: 16px;
 }
 
-.Homologado{
+.HOMOLOGADO{
     color: rgb(0, 131, 28);
 }
 
-.Não-Homologado{
+.RECUSADO{
     color: rgb(185, 0, 0);
 }
 
-.Pendente{
-    color: rgb(0, 79, 182);
-}
 

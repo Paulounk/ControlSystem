@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
-import { Document } from '../document.model';
-import { DocumentService } from '../document.service';
+import { Document } from '../../model/document.model';
+import { DocumentService } from '../../service/document.service';
 
 @Component({
   selector: 'app-document-list',
@@ -29,7 +28,7 @@ export class DocumentListComponent implements OnInit {
     this.documentService.read().subscribe(documents => {
       this.documents = documents
       this.documents.filter(i => {
-        return i.status === "Homologado"
+        return i.status === "Homologado" || i.status === "HOMOLOGADO"
       }).forEach(i => {
         this.horasTotais += i.hours
       })
