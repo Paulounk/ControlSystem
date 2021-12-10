@@ -1,5 +1,5 @@
-# Desafio Tecnico 
-Desafio técnico proposto pelo Grupo Tiradentes e Mundo Jix.
+# Sistema de Controle de Horas Complementares
+
 
 Aplicação para validação e controle de horas complementares de alunos.
 
